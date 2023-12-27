@@ -1,13 +1,17 @@
+import { Metadata } from 'next';
 import Link from 'next/link';
 
-export default function Home() {
+export const metadata: Metadata = {
+  title: {
+    absolute: 'Blog',
+  },
+};
+
+export default function Blog() {
   return (
     <>
-      <h1>Welcome home!</h1>
-
-      <Link href="/products"> Products </Link>
-      <Link href="/about"> About </Link>
-      <Link href="/contacts"> Contacts </Link>
+      <Link href="/">Home</Link>
+      <h1>My Blog</h1>
     </>
   );
 }
